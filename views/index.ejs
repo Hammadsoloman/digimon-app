@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <section>
+            <%arr.forEach((char)=>{%>
+            <h3>Name : <%=char.name%></h3>
+            <p> Image : <%=char.img%></p>
+            <h4>Level :<%=char.level%></h4>
+            <a href="/favotite">Click here</a>
+            <%})%>
+        </section>
+    </main>
+</body>
+
+</html>

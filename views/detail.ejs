@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <main>
+        <ul>
+            <li><%=char.name%></li>
+            <li><%=char.img%></li>
+            <li><%=char.level%></li>
+        </ul>
+
+
+        <form action="/update/<%=char.id%>?_method=put" method="post">
+
+            <input type="text" name="name" value="<%=char.name%>">
+            <img src="<%=char.img%>" alt="img">
+            <input type="text" name="level" value="<%=char.level%>">
+            <button>UPDATE</button>
+
+        </form>
+
+        <form action="/delete/<%=char.id%>?_method=delete" method="post">
+            <button>DELETE</button>
+        </form>
+
+    </main>
+
+
+
+
+</body>
+
+</html>
