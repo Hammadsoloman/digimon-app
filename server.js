@@ -24,6 +24,8 @@ app.get('/favorite',getDb);
 app.get('/charact/:char_id',getOneChar);
 app.put('/update/:char_id',updateChar);
 app.delete('/delete/:char_id',deleteChar)
+app.get('/add',getResults);
+app.post('/add',addResults);
 
 app.use('*',notFoundHandler);
 
@@ -108,6 +110,24 @@ function deleteChar(req,res){
     })
 }
 
+/*************strech goals (its work) */
+
+// function getResults(req,res){
+//     res.render('results')
+// }
+
+// function addResults(req,res){
+//     let{name,img,level}=req.body;
+//     let SQL='INSERT INTO digimon (name,img,level) VALUES ($1,$2,$3);';
+//     const values=[name,img,level]
+//     client.query(SQL,values)
+//     .then((results)=>{
+//         res.render('show')
+//     })
+//     .catch((err)=>{
+//         errorHandler(err,req,res)
+//     })
+// }
 
 
 function notFoundHandler(req,res){
